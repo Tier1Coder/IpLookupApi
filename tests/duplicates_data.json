@@ -1,0 +1,9 @@
+[
+    {"tag": "foo", "ip_network": "192.0.2.0/24"},
+    {"tag": "bar", "ip_network": "192.0.2.8/29"},
+    {"tag": "bar", "ip_network": "10.20.0.0/16"},
+    {"tag": "SPAM", "ip_network": "10.20.30.40/32"},
+    {"tag": "SPAM", "ip_network": "10.20.30.40/32"},
+    {"tag": "SPAM", "ip_network": "10.20.30.40/32"},
+    {"tag": "foo", "ip_network": "10.20.0.0/16"}
+]

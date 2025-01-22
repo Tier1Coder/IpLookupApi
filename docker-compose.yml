@@ -1,0 +1,13 @@
+services:
+  django_ip_lookup_api:
+    container_name: ip_lookup_api_container
+    volumes:
+      - static:/static
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    restart: always
+
+volumes:
+  static:
