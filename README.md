@@ -15,12 +15,29 @@ This repository contains the implementation of a REST API for managing and query
 The service is implemented in Python 3.13 using the `Django` framework. 
 It provides two main endpoints for fetching tags associated with IPv4 addresses based on a knowledge base.
 
+### Example Usage  
+Below is an example request and response for fetching IP tags using this API.  
+
+Request:
+```bash
+curl -X GET http://localhost:8080/ip-tags/192.168.1.1
+```
+Response
+```JSON
+{
+  "ip": "192.168.1.1",
+  "tags": ["corporate", "vpn", "trusted"]
+}
+```
+
+---
+
 ### Key Features
 
 - **Supports two endpoints:**
   - `GET /ip-tags/{ip}`: Returns a JSON list of tags for the given IPv4 address.
   - `GET /ip-tags-report/{ip}`: Returns an HTML table with tags for the given IPv4 address.
-- **Tags are stored in a Patricia Trie** for efficient querying.
+- **Tags are stored in a Patricia Trie** using [Pytricia](https://github.com/jsommers/pytricia) library for efficient querying.
 - **The knowledge base is read from a JSON file** during service initialization.
 - **Database** is not needed.
 
